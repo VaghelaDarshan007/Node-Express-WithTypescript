@@ -1,18 +1,9 @@
 import * as express from "express";
+import * as productRoutes from "./api/routes/products"
 
 const app = express();
 
-// app.use((req, res, next) => {
-//     res.status(200).json({
-//         message: "Hello welcome from darshan!!!";
-//     });
-// });
+app.use("/products", productRoutes);
 
-app.use((req, res, next) => {
-    res.status(200).json({
-        message: "Hello, from darshan"
-    });
-});
-
-module.exports = app;
+export = app;
 
