@@ -7,8 +7,13 @@ router.get('/', (req, res, next) => {
     });
 });
 router.post('/', (req, res, next) => {
+    const orderDetails = {
+        productId: req.body.productId,
+        quantity: req.body.quantity
+    };
     res.status(201).json({
-        message: "POST: orders will displayed here!!!"
+        message: "POST: orders will displayed here!!!",
+        Details: orderDetails
     });
 });
 // simple comment
