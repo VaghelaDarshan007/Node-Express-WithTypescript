@@ -2,12 +2,9 @@
   "name": "apiexample",
   "version": "1.0.0",
   "description": "RESTfull API with typescript",
-  "main": "server.js",
+  "main": "dist/server.js",
   "scripts": {
-    "tsc": "tsc",
-    "lint": "tslint -c tslint.json 'src/**/*.ts' --fix",
-    "start": "tsc --watch & nodemon --inspect dist",
-    "build": "tsc -w",
+    "start": "tsc && node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Darshan Vaghela",
